@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation", "SpaceXLaunchpadInformation\SpaceXLaunchpadInformation.csproj", "{3A6C45EF-02DA-4D33-9A87-435771E0F298}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Api", "SpaceXLaunchpadInformation\SpaceXLaunchpadInformation.Api.csproj", "{3A6C45EF-02DA-4D33-9A87-435771E0F298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Application", "SpaceXLaunchpadInformation.Application\SpaceXLaunchpadInformation.Application.csproj", "{53000B88-77B9-4BE3-A1C9-0501343B1749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Domain", "SpaceXLaunchpadInformation.Domain\SpaceXLaunchpadInformation.Domain.csproj", "{DC755BC8-8606-4885-9191-13B1C5F4E71F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Infrastructure", "SpaceXLaunchpadInformation.Infrastructure\SpaceXLaunchpadInformation.Infrastructure.csproj", "{E41CF506-1201-4989-A498-142C4D07F917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{3A6C45EF-02DA-4D33-9A87-435771E0F298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A6C45EF-02DA-4D33-9A87-435771E0F298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A6C45EF-02DA-4D33-9A87-435771E0F298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53000B88-77B9-4BE3-A1C9-0501343B1749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53000B88-77B9-4BE3-A1C9-0501343B1749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53000B88-77B9-4BE3-A1C9-0501343B1749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53000B88-77B9-4BE3-A1C9-0501343B1749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC755BC8-8606-4885-9191-13B1C5F4E71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC755BC8-8606-4885-9191-13B1C5F4E71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC755BC8-8606-4885-9191-13B1C5F4E71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC755BC8-8606-4885-9191-13B1C5F4E71F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41CF506-1201-4989-A498-142C4D07F917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41CF506-1201-4989-A498-142C4D07F917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41CF506-1201-4989-A498-142C4D07F917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41CF506-1201-4989-A498-142C4D07F917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

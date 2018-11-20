@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceXLaunchpadInformation.Application\SpaceXLaunchpadInformation.Application.csproj" />
+    <ProjectReference Include="..\SpaceXLaunchpadInformation.Domain\SpaceXLaunchpadInformation.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

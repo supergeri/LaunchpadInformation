@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SpaceXLaunchpadInformation.Repositories;
+using SpaceXLaunchpadInformation.Application.LaunchpadInformation.Queries.GetLaunchpadInformation;
 
 namespace SpaceXLaunchpadInformation.Controllers
 {
@@ -11,18 +11,18 @@ namespace SpaceXLaunchpadInformation.Controllers
     [ApiController]
     public class LaunchpadInformationController : ControllerBase
     {
-        private ILaunchPadInformationRepo _launchPadInformationRepo;
+        private IGetLaunchpadInformation _launchPadInformationQuery;
 
-        public LaunchpadInformationController(ILaunchPadInformationRepo launchPadInformationRepo)
+        public LaunchpadInformationController(IGetLaunchpadInformation launchPadInformationQuery)
         {
-            _launchPadInformationRepo = launchPadInformationRepo;
+            _launchPadInformationQuery = launchPadInformationQuery;
         }
 
         // GET api/values
         [HttpGet]
-        public IActionResult GetLaunchPadInformation()
+        public async Task<IActionResult> Get()
         {
-            var launchPadInfoModel = _launchPadInformationRepo.GetLaunchPadInformation();
+            var launchPadInfoModel = await _launchPadInformationQuery.Execute();
 
             return Ok(launchPadInfoModel);
         }

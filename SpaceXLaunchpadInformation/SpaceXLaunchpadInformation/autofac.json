@@ -1,0 +1,18 @@
+{
+  "defaultAssembly": "SpaceXLaunchpadInformation.Infrastructure",
+  "modules": [
+    {
+      "type": "SpaceXLaunchpadInformation.Api.Module, SpaceXLaunchpadInformation.Api",
+      "properties": {
+      }
+    },
+    {
+      "type": "SpaceXLaunchpadInformation.Infrastructure.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "SpaceXLaunchpadInformation.Infrastructure.ApiDataAccess.Module"
+    }
+  ]
+}
