@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Api", "SpaceXLaunchpadInformation\SpaceXLaunchpadInformation.Api.csproj", "{3A6C45EF-02DA-4D33-9A87-435771E0F298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXLaunchpadInformation.Api", "SpaceXLaunchpadInformation\SpaceXLaunchpadInformation.Api.csproj", "{3A6C45EF-02DA-4D33-9A87-435771E0F298}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Application", "SpaceXLaunchpadInformation.Application\SpaceXLaunchpadInformation.Application.csproj", "{53000B88-77B9-4BE3-A1C9-0501343B1749}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXLaunchpadInformation.Application", "SpaceXLaunchpadInformation.Application\SpaceXLaunchpadInformation.Application.csproj", "{53000B88-77B9-4BE3-A1C9-0501343B1749}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Domain", "SpaceXLaunchpadInformation.Domain\SpaceXLaunchpadInformation.Domain.csproj", "{DC755BC8-8606-4885-9191-13B1C5F4E71F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXLaunchpadInformation.Domain", "SpaceXLaunchpadInformation.Domain\SpaceXLaunchpadInformation.Domain.csproj", "{DC755BC8-8606-4885-9191-13B1C5F4E71F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Infrastructure", "SpaceXLaunchpadInformation.Infrastructure\SpaceXLaunchpadInformation.Infrastructure.csproj", "{E41CF506-1201-4989-A498-142C4D07F917}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceXLaunchpadInformation.Infrastructure", "SpaceXLaunchpadInformation.Infrastructure\SpaceXLaunchpadInformation.Infrastructure.csproj", "{E41CF506-1201-4989-A498-142C4D07F917}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{015721F6-7FFE-4703-98DF-46CF9667BCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceXLaunchpadInformation.Api.Tests", "SpaceXLaunchpadInformation.Api.Tests\SpaceXLaunchpadInformation.Api.Tests.csproj", "{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{E41CF506-1201-4989-A498-142C4D07F917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E41CF506-1201-4989-A498-142C4D07F917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E41CF506-1201-4989-A498-142C4D07F917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B8AC7AB7-4313-4D0C-8CB8-C5F5812002A9} = {015721F6-7FFE-4703-98DF-46CF9667BCAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4D44AD48-CF25-407F-9108-7D017733B6E8}

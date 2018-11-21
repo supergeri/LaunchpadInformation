@@ -20,10 +20,11 @@ namespace SpaceXLaunchpadInformation.Api
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-             WebHost.CreateDefaultBuilder(args)
+                  WebHost.CreateDefaultBuilder(args)
                  .ConfigureAppConfiguration((context, config) =>
                  {
                      var builtConfig = config.Build();
+                    
                  })
                 .UseSerilog((hostingContext, loggerConfiguration) =>
                  {
