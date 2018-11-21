@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Autofac;
-using Autofac.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,13 +28,9 @@ namespace SpaceXLaunchpadInformation.Api
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            // services.AddScoped<Application.LaunchpadInformation.Queries.GetLaunchpadInformation.IGetLaunchpadInformation, Application.LaunchpadInformation.Queries.GetLaunchpadInformation.GetLaunchpadInformation>();
+            services.AddScoped<IGetLaunchpadInformation, GetLaunchpadInformation>();
+            services.AddScoped<Application.Repositories.IReadLaunchpadInformationRepository, Infrastructure.ApiDataAccess.Repositories.LaunchpadInormationRepository>();
 
-        }
-
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            builder.RegisterModule(new ConfigurationModule(Configuration));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,6 +7,6 @@ namespace SpaceXLaunchpadInformation.Application.LaunchpadInformation.Queries.Ge
 {
     public interface IGetLaunchpadInformation
     {
-        Task<SpaceXLaunchpadInformation.Domain.LaunchpadInformation> Execute();
+        Task<List<SpaceXLaunchpadInformation.Domain.LaunchpadInformation>> Execute();
     }
 }

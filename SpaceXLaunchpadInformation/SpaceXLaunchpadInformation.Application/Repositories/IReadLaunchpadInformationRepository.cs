@@ -8,6 +8,6 @@ namespace SpaceXLaunchpadInformation.Application.Repositories
 {
     public interface IReadLaunchpadInformationRepository
     {
-        Task<SpaceXLaunchpadInformation.Domain.LaunchpadInformation> Get();
+        Task<List<SpaceXLaunchpadInformation.Domain.LaunchpadInformation>> Get();
     }
 }

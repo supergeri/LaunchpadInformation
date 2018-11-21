@@ -17,7 +17,7 @@ namespace SpaceXLaunchpadInformation.Application.LaunchpadInformation.Queries.Ge
         }
 
 
-        public Task<Domain.LaunchpadInformation> Execute()
+        public Task<List<Domain.LaunchpadInformation>> Execute()
         {
             return _readLaunchpadInformationRepository.Get();
         }

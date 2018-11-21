@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SpaceXLaunchpadInformation.Application.Repositories;
 using SpaceXLaunchpadInformation.Domain;
 using SpaceXLaunchpadInformation.Infrastructure.ApiDataAccess.Entities;
@@ -13,29 +15,26 @@ namespace SpaceXLaunchpadInformation.Infrastructure.ApiDataAccess.Repositories
 {
     public class LaunchpadInormationRepository : IReadLaunchpadInformationRepository
     {
-        private readonly string url = "https://api.spacexdata.com/v2/launchpads";
 
-        private readonly Context _context;
 
-        public LaunchpadInormationRepository(Context context)
+        public async Task<List<LaunchpadInformation>> Get()
         {
-            _context = context;
-        }
-
-        public async Task<LaunchpadInformation> Get()
-        {
-            using (var client = _context.httpClient)
+            using (var client = new HttpClient())
             {
-                var response = client.GetStringAsync(new Uri(url)).Result;
-                var releases = JArray.Parse(response);
+                var response = client.GetStringAsync(new Uri(Config.Get("launchpadurl"))).Result;
+                var data  = JsonConvert.DeserializeObject< List<LaunchData>>(response);
 
-                var entitiyResult =  releases.ToObject<LaunchData>();
+                var result = new List<LaunchpadInformation>();
 
-                var result = _context.launchpadInformation;
-
-                result.LaunchPadId = entitiyResult.id;
-                result.LaunchPadName = entitiyResult.full_name;
-                result.LaunchPadStatus = entitiyResult.status;
+                data.ForEach(x =>
+                {
+                    result.Add(new LaunchpadInformation
+                    {
+                        LaunchPadId = x.id,
+                        LaunchPadName = x.full_name,
+                        LaunchPadStatus = x.status,
+                    });
+                });
 
                 return result;
             }
