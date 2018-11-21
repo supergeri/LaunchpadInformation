@@ -29,6 +29,8 @@ namespace SpaceXLaunchpadInformation.Api
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<IGetLaunchpadInformation, GetLaunchpadInformation>();
+
+            //To replace api with database. Implement IReadLaunchpadInformationRepository for database call and change concrete implementation here
             services.AddScoped<Application.Repositories.IReadLaunchpadInformationRepository, Infrastructure.ApiDataAccess.Repositories.LaunchpadInormationRepository>();
 
         }
